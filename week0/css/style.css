@@ -1,0 +1,647 @@
+/*===================================================
+            Global style
+=====================================================*/
+/* The width and height properties (and min/max properties) includes content, padding and border */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Palatino Linotype', sans-serif;
+}
+
+
+/* Remove the default link color and underline of the html hyperlink  */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/list-style */
+
+/* Set the value of list-style property to none to remove bullets */
+
+li {
+  list-style: none;
+}
+
+/* Center elements */
+.centering-el {
+  margin: 0 auto;
+}
+
+
+/* Full width and height elements */
+
+.full-height-width {
+  width: 100%;
+  height: 100%;
+}
+
+/* Separation between divs */
+
+.margin_sep{
+  margin-bottom: 6px;
+}
+
+/* Global backgrounds color*/
+
+.gl_bg_color {
+  background-color: #fafafa;;
+}
+
+/* Smooth srcoll */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Center all h2 elements */
+h2 {
+  text-align: center;
+}
+
+/*===================================================
+            Header style
+=====================================================*/
+
+/* Set the height to 100 to get full page height */
+/* Set border-radius to round the corners of an element's outer border edge to get desired design */
+/* Set the overflow property value to hidden, to hide an element's content that is too big to fit in its block formatting context.  */
+
+
+
+#main-header {
+  height: 100vh;
+  color: #fff; 
+  border-radius: 0 0 85% 85% / 20%;
+  background-image: url(https://i.postimg.cc/bYS1TXtV/adventure-daylight-desert-6496.jpg);
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/* Set overlay div position property to relative to become the parent positioning of  overlay-cnt*/
+
+/* Set linear-gradient() CSS function that creates an image consisting of a progressive transition between two or more colors along a straight line.  */
+
+/* A linear gradient is defined by an axis—the gradient line—and two or more color-stop points.  */
+
+.overlay {
+   position: relative;
+  /* Chrome, Safari*/
+  background-image: -webkit-linear-gradient(0deg, #D3959B, transparent 70%); 
+  background-image: linear-gradient(0deg, #D3959B, transparent 70%);
+}
+
+
+/*  Set absolute value to position property to remove element from the normal document flow, to center the element perfectly in the center of the parent */
+
+
+.overlay-cnt {
+  position: absolute;
+  z-index: 1;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.overlay-cnt h1 {
+  font-size: 1.3em;
+}
+
+/* Set the position to fixed value to position element in relation to the browser window instead of containing element, and to stay fixed. */
+
+.nav-ul {
+  font-size: .82rem;
+  height: 55px;
+  display: flex;
+  z-index: 1000;
+  justify-content:space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #446a88;
+  box-shadow: -2px -1px 4px 1px rgba(23, 22, 21, 0.33);
+  position: fixed;
+}
+
+
+.nav-ul li a{
+ color: #fff; 
+ position: relative;
+}
+
+
+/* Set ::before pseudo-element to create cosmetic animated line onhovering with the content property */
+
+/* Set the transition property to to define the transition between two states of an element.
+Is a shorthand property for transition-property, transition-duration, transition-timing-function, and transition-delay. */
+
+
+.nav-ul li a::before {
+  content: '';
+  height: 3px;
+  width: 0;
+  background: #895fd2;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  transition: width cubic-bezier(0.58, 1.11, 0.62, 0.66) .2s; 
+}
+
+.nav-ul li a::after  {
+  content: '';
+  height: 3px;
+  width: 0;
+  background: #ff8206;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  transition: width cubic-bezier(0.58, 1.11, 0.62, 0.66) .2s;
+}
+
+
+/* Set :hover pseudo-class when the user hover the list element bu only target the before contenet property and change its width to 50% and move it horizontally */
+
+.nav-ul li:hover a::before {
+   width: 50%;
+   transform: translateX(100%);
+}
+
+/* Set -100% to move the content from right to left */
+.nav-ul li:hover a::after {
+    width: 50%;
+   transform: translateX(-100%);
+}
+
+
+/* Set text-align property to center the inline contents within the line box. */
+
+#main-header div {
+  text-align: center;
+}
+
+/*===================================================
+            About Course style
+=====================================================*/
+
+/* Set Viewport Height (vh) – A percentage of the full viewport height. */
+
+#about {
+  height: 55vh;
+  text-align: center;
+  padding-top: 6%;
+}
+
+
+#about h2 {
+  opacity: .7;
+}
+
+/* Set display property to inline-block to apply marging and width */
+
+.course-about {
+ width: 60%;
+ margin: 2% 5% 0;
+ display: inline-block;
+ font-size: 1.2em;
+ line-height: 1.6;
+}
+
+
+/*===================================================
+           Style accomplishments Section
+=====================================================*/
+
+
+.accom_sec {
+  height: 90vh;
+  background-color: #3e474f;
+  text-align: center;
+  color: #fff;
+}
+
+
+.accom_sec #accom-headline {
+  padding: 1.7rem 0;
+  margin: 0;
+}
+
+/* Get the container 100% width and height to make sure that 
+silde will take full screen */
+
+/* Set accom_container div position property to relative to become the parent positioning of absolute position of slides_header*/
+
+/* Set overflow to hidden to not get any horizontal scroll bar */
+
+.accom_container{
+  width: 100%;
+  height: 90%;
+  position: relative;
+  overflow: hidden;
+  background: #120103;
+  color: #fff;
+  text-align: center;
+}
+
+
+/* Set position to absolute to position the element to the top-left corner */
+
+/* Set Z-index to 600 to make sure that the z-order of a positioned element is in the top of rest content*/
+
+#slides_header {
+  background-color: #3e474f;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 600;
+  width: 100%;
+}
+
+
+/* Set display to inline-block, the label will be side by side and centered */
+
+#slides_header label {
+  cursor: pointer;
+  display: inline-block;
+  line-height: 4;
+  font-weight: bold;
+  padding: 0 1.4rem;
+}
+
+/* Change the label background color on hover */
+#slides_header label:hover {
+  background-color: #2e353b;
+}
+
+
+/* Set the left: 100% to push the slide out of the window */
+/* Set all non-checked slides z-index to 10  */
+/* Set background-position to 50% 50% to center the background image */
+/* Set background-size to cover so the image will fill up the intire slide  */
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 10;
+  padding: 15rem 0 0;
+  background: #120103;
+  background-position: 50% 50%;
+  background-size: cover;
+  transition: left 0s .75s;
+}
+
+/* Move the slides to the screen only when right radio is checked */
+
+/* Based on MDN */
+/* The CSS attribute selector matches elements based on the presence or value of a given attribute. */
+
+/* id^="slide" maches the each element its id name beginning with slide */
+
+/* Set transition to smoothly slide the elements  */
+
+[id^="slide"]:checked + .slide {
+  left: 0;
+  z-index: 100;
+  transition: left .65s ease-out;
+}
+
+
+.slide p {
+  font-size: 1.6rem;
+  text-shadow: 1px 2px 6px rgb(0, 0, 0);
+  opacity: 0;
+  transform: translateY(100%);
+  transition: transform .5s .6s, opacity .5s;
+}
+
+/* Adjacent sibling combinator (+) matches p that come immediately after any slide input */
+
+[id^="slide"]:checked + .slide p {
+   opacity: 1;
+   transform: translateY(0);
+  transition: all .6s .6s;
+}
+
+
+/*===================================================
+           Style courses section
+=====================================================*/
+.courses {
+  padding: 30px 0;
+}
+
+
+/* Center the element */
+
+#courses_headline {
+  text-align: center;
+  opacity: .7;
+  margin: 3% 0;
+}
+
+/* Set display to flex to make it flex container and to layout the elements(flex item) side by side*/
+
+/* The default value of flex is Main axis */
+
+/* Set flex-wrap to wrap to break items on multiply lines */
+
+/* Set justify-content to distribute the available space between items after padding and margin*/
+.courses_col {
+  margin: 0 17%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+/* Set flex-grow to 1 to assign the remaining space in the flex container to the item */
+
+/* Set flex-basis to 230px  to give more control over the size of flex items*/
+
+
+.col {
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+    margin: 12px;
+    height: 295px;
+    cursor: pointer;
+    border-radius: 3%;
+    overflow: hidden;
+    flex-grow: 1;
+    flex-basis: 230px;
+    transition: box-shadow ease-out .5s;
+}
+
+
+/* Use box-shadow property to add shadow effects around an element's frame. */
+
+.col:hover {
+  box-shadow: 0px 1px 11px 2px rgba(23, 22, 21, 0.33);
+}
+
+/* Use linear-gradient to set different background images  */
+/* By default gradient position goes from top to bottom */
+/* -190deg Set different position values to control the angul of gradiets */
+
+.sql, .slide-six {
+  background-image: linear-gradient(-190deg, #79c206, #c19a0d);
+}
+
+.html, .slide-four {
+  background-image: linear-gradient(150deg, #ffd35e, #bb1800);
+}
+
+.css, .slide-two {
+  background-image: linear-gradient(150deg, #6eb2ff, #044b80);
+}
+.js,  .slide-one{
+  background-image: linear-gradient(170deg, #faf329, #b8a20c);
+}
+
+.node, .slide-five  {
+  background-image: linear-gradient(170deg, #26f416, #145c02);
+}
+
+.react, .slide-three {
+  background-image: linear-gradient(170deg, #07baf5, #05414a);
+}
+
+/* How to use CSS transition */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/transition */
+
+.icons-col {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 14%;
+  transition: height .4s ease-out;
+}
+
+/* Set top to 50%, left to 50% and transform to translate(-50%, -50%) to center the element  */
+
+i.icon_gn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+  color: #fff;
+  transition: font-size .6s cubic-bezier(0.21, 0.09, 0, 0.94);
+}
+
+.col:hover .icons-col{
+  height: 50%;
+}
+
+.col:hover .icon_gn {
+  font-size: 4rem;
+}
+
+.col h2 {
+  text-align: left;
+  margin: 55% 0 3% 0;
+}
+
+.col h2, .col p {
+  padding-left: 8%;
+  font-size: 1rem;
+}
+
+
+.col p{
+  color: rgba(14, 14, 14, 0.63);
+  font-size: .90rem;
+}
+
+
+/*===================================================
+           Style Table section
+=====================================================*/
+
+#table_info, #container-form{
+  padding: 35px 0;
+}
+
+
+#table_info h2 {
+  font-size: 1.2rem;
+  opacity: .7;
+}
+
+#table_info div{
+  margin: 0 auto;
+  width: 70%;
+}
+
+/* How to use table-layout
+https://css-tricks.com/almanac/properties/t/table-layout/ */
+
+
+table {
+  width: 100%;
+  margin: 5px 0;
+  font-size: .90rem;
+  text-align: center;
+  table-layout: fixed;
+  transition: box-shadow .5s ease-out;
+}
+
+table:hover {
+  box-shadow: 0px 1px 11px 2px rgba(23, 22, 21, 0.33);
+}
+
+
+/* Set border-collapse to collapse, to collapse borders into a single border  */
+
+table, tr, th, td {
+  padding: 20px;
+  border: 1px solid #000;
+  border-collapse: collapse;
+}
+
+
+table thead th {
+  color: #fff;
+  background: #05414a;
+}
+
+table caption {
+  margin: 20px;
+  font-size: 1rem;
+}
+
+
+/*===================================================
+           Style Form section
+=====================================================*/
+
+
+
+#container-form {
+  font-size: .90rem;
+  color: #013a67;
+  padding: 8% 0;
+  height: 80vh;
+  text-align: center;
+}
+
+form h2 {
+  font-size: 1rem;
+  display: inline-block;
+  margin-left: -1.4%;
+  margin-bottom: 3%;
+  font-weight: 100;
+}
+
+/* Set display to flex to make it flex container and to layout the elements(flex item) side by side*/ 
+
+.row{
+  display: flex;
+  justify-content: center;
+}
+
+
+.label{
+    display: inline-block;
+    text-align: left;
+    width: 79%;
+}
+
+
+/* Use attribute selectors to maches all elements with type text, email and password */
+
+input[type="text"],
+input[type="email"], 
+input[type="password"] {
+  width: 80%;
+  color: #4e5478;
+  font-size: 1rem;
+  margin-bottom: 20%;
+  line-height: 1;
+  padding: 6% 0 2%;
+  border: none;
+  border-bottom: 2px solid #255d78;
+  background-color: transparent;
+  outline: none;
+  border-radius: 0px;
+}
+
+
+#submit-button {
+  background: #255d78;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 13px;
+  border: none;
+  width: 13%;
+  transition: all .3s ease;
+}
+
+#submit-button:hover {
+   background: #bccad1;
+   color: #434246;
+   box-shadow: 0px 1px 4px 2px rgba(23, 22, 21, 0.33)
+}
+
+/*===================================================
+           Style Footer section
+=====================================================*/
+
+
+#footer {
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+  color: #6e94a7;
+}
+
+#footer-main {
+  width:80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.foot_nav ul li a{
+  color: #6e94a7;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: .90rem;
+  transition: all .3s;
+}
+
+
+.foot_nav ul li a:hover {
+  color: #cde2ee;
+}
+
+.icons-social ul li a {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.scale {
+  transition: transform ease .3s, color ease .3s;
+}
+
+
+/* Set transform to scales, to an element upon the 2D plane */
+.scale:hover {
+  color: #cde2ee;
+  transform: scale(1.2);
+}
