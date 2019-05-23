@@ -6,4 +6,8 @@ HYF homeworks repository
   <li>
      https://shyark.github.io/week0/
   </li>
+   <li>
+     https://shyark.github.io/week1/
+  </li> 
+  
 </ul>
