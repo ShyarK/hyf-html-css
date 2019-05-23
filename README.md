@@ -1,7 +1,7 @@
 # hyf-html-css
 HYF homeworks repository
 
-<h1>My homeworks hosted on Github:</h1>
+<h6>My homeworks hosted on Github:</h6>
 <ul>
   <li>
      https://shyark.github.io/week0/
