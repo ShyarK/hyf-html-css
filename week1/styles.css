@@ -15,7 +15,6 @@
     scroll-behavior: smooth;
   } 
 
-
   /* Remove the default link color and underline of the html hyperlink  */
   
   a {
@@ -23,25 +22,22 @@
     color: #fff; 
   }
   
-
   /* Set the value of list-style property to none to remove bullets */
   
   li {
     list-style: none;
   }
 
-
-  .shadow {
+ .shadow {
     box-shadow: 0px 0px 8px 0px rgba(21, 17, 17, 0.71);
     border-radius: 2%;
   }
- 
+
   .sectionsHeigh {
     min-height: 60vh;
   }
  
   /* Body Style */
-
 
   nav {
     background: rgba(0, 116, 255, 0.68);
