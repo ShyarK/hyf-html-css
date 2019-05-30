@@ -8,6 +8,8 @@ HYF homeworks repository
   </li>
    <li>
      https://shyark.github.io/week1/
-  </li> 
-  
+  </li>
+     <li>
+      https://shyark.github.io/Week-2-HTML-and-CSS/
+  </li>
 </ul>
