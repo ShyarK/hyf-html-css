@@ -1,0 +1,259 @@
+/* Base Style */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #fff;
+}
+
+body {
+    background-image: linear-gradient(111.95647678511193deg,
+     rgba(249, 63, 72,1) 5.533854166666667%,
+     rgba(250, 183, 121,1) 96.67968749999999%);
+    padding: 50px 0 100px 0;
+    background-size: 600% 600%;
+    animation: animated-background 7s ease infinite;
+}
+
+main {
+    width: 94%;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 95%;
+    max-height: 95%;
+}
+
+li {
+    list-style: none;
+    position: relative;
+    overflow: hidden;
+}
+
+section::before {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+h2 {
+    margin: 50px 0;
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+}
+
+h3 {
+    padding: 5px;
+    background-image: linear-gradient(#080808b8, #16011bb3);
+    width: 100%;
+}
+
+/* Header Style */
+header {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    display: block;
+    width: 278px;
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 12px;
+}
+/* Grid with floats Style */
+
+h3,  p {
+    font-size: .96em;
+    position: absolute;
+    transform: translateY(-450px);
+    transition: transform 0.7s ease-in-out;
+}
+
+ h3 { 
+    z-index: 200;
+    height: 100%;
+}
+
+.grid-item:hover h3 {
+  transform: translateY(0);
+}
+
+p {
+    color: #bcbcbc;
+    padding: 4px;
+    font-size: 1em;
+    z-index: 400;
+    line-height: 1.5;
+}
+
+.grid-item:hover p { 
+    transform: translateY(27px);
+}
+
+img {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: top .6s ease .23s;
+}
+
+.grid-item:hover img {
+    top: 50%;
+}
+
+.grid-item {
+    width: calc(97% / 2);
+    margin: 5px 0;
+    font-size: .68em;
+    min-height: 34vh;
+    box-shadow: 0px 1px 11px 2px rgba(23, 22, 21, 0.33);
+    background-color: #fff;
+    border-radius: 5px;
+ }
+
+ #grid-floats .grid-item:nth-child(2n+1) {
+    float: left;
+ }
+ 
+ #grid-floats .grid-item:nth-child(2n+2) {
+    float: right;
+ }
+
+ .grid-item:nth-child(1) {
+    width: 100%;
+ }
+ 
+ /* Grid with flexbox */
+ #grid-flex {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+ }
+
+ #grid-flex .grid-item:nth-child(1n+2) {
+    flex-grow:1;
+    margin: 5px;
+    flex-basis: calc(97% / 2.1);
+ }
+
+ #grid-flex .grid-item:nth-last-child(1) {
+    flex-grow: unset;
+    flex-basis: calc(97% / 2.07);
+    margin-left: auto;
+ }
+
+ /* =====================================
+         Media queries
+======================================== */
+/* For iPad */
+@media (min-width: 768px){
+/* Grid with floats Style */
+    #grid-floats .grid-item{
+        width: calc(95% / 3);
+        margin: 5px;
+    }
+
+    #grid-floats .grid-item:nth-child(1n+1) {
+        float: left;
+    }
+
+    /* Target first and second child of float element,
+    and set their width to a size that makes them appear side by side */
+
+    /* The follwoing technique is going to target second element
+    in the list and the element that precedes it */
+
+    #grid-floats .grid-item:nth-child(-1n+2) {
+        width: calc(95% / 2);
+        margin: .75em;
+    }
+
+    #grid-floats .grid-item:nth-child(-1n+2) p{
+        line-height: 2;
+    }
+
+    #grid-floats .grid-item:nth-child(1) {
+        margin-left: .60em;
+    }
+
+    p,h3 {
+        font-size: 1.7em;
+    }
+
+    .grid-item:hover p { 
+        transform: translateY(45px);
+    }
+  
+/* Grid with flexbox Style*/
+
+    #grid-flex .grid-item:nth-child(1n+2) {
+        flex-basis: calc(95% / 3);
+    }
+
+    #grid-flex .grid-item:nth-child(-1n+2) {
+        flex-basis: calc(95% / 2);
+        margin: 5px;
+    }
+}
+
+
+
+/* For larger screens */
+
+@media (min-width: 1024px) {
+/* Grid with floats Style */
+    #grid-floats .grid-item:nth-child(1n+2){
+        width: calc(95% / 4);
+        margin: 4px;
+    }
+
+    #grid-floats .grid-item:nth-child(1) {
+        margin: 4px;
+        width: 48%;
+    }
+/* Grid with flexbox Style*/
+    #grid-flex .grid-item:nth-child(1) {
+        flex-grow: 3;
+    }
+
+    #grid-flex .grid-item:nth-child(1n+2) {
+        flex-grow: 1;
+        flex-basis: calc(95% / 4);
+        margin: 4px;
+    }
+
+    #grid-flex .grid-item:nth-child(1n+12) {
+        flex-basis: calc(97.7% / 4);
+        flex-grow: unset;
+     }
+
+     #grid-flex .grid-item:nth-last-child(1) {
+         margin-right: auto;
+     }
+
+}
+/* Key Frames */
+@keyframes animated-background {
+    0% {
+        background-position: 0% 25%;
+    }
+    25% {
+        background-position: 50% 100%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    75% {
+        background-position: 50% 100%;
+    }
+    100% {
+        background-position: 0% 25%;
+    }
+}
