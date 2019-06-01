@@ -78,6 +78,7 @@ h3,  p {
  h3 { 
     z-index: 200;
     height: 100%;
+    padding-top: 17px;
 }
 
 .grid-item:hover h3 {
@@ -93,7 +94,7 @@ p {
 }
 
 .grid-item:hover p { 
-    transform: translateY(27px);
+    transform: translateY(43px);
 }
 
 img {
@@ -112,7 +113,7 @@ img {
     width: calc(97% / 2);
     margin: 5px 0;
     font-size: .68em;
-    min-height: 34vh;
+    min-height: 38vh;
     box-shadow: 0px 1px 11px 2px rgba(23, 22, 21, 0.33);
     background-color: #fff;
     border-radius: 5px;
@@ -166,7 +167,6 @@ img {
 
     /* Target first and second child of float element,
     and set their width to a size that makes them appear side by side */
-
     /* The follwoing technique is going to target second element
     in the list and the element that precedes it */
 
@@ -202,8 +202,6 @@ img {
         margin: 5px;
     }
 }
-
-
 
 /* For larger screens */
 
