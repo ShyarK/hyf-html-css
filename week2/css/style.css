@@ -188,7 +188,7 @@ img {
     }
 
     .grid-item:hover p { 
-        transform: translateY(45px);
+        transform: translateY(72px);
     }
   
 /* Grid with flexbox Style*/
