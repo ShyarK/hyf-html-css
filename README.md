@@ -12,4 +12,7 @@ HYF homeworks repository
      <li>
       https://shyark.github.io/Week-2-HTML-and-CSS/
   </li>
+  <li>
+    https://shyark.github.io/hyf-html-css/week3/
+  </li>
 </ul>
