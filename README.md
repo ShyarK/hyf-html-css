@@ -10,7 +10,7 @@ HYF homeworks repository
      https://shyark.github.io/week1/
   </li>
      <li>
-      https://shyark.github.io/Week-2-HTML-and-CSS/
+     https://shyark.github.io/hyf-html-css/week2/
   </li>
   <li>
     https://shyark.github.io/hyf-html-css/week3/
