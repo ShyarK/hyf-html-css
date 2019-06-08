@@ -156,6 +156,11 @@ img {
 /* For iPad */
 @media (min-width: 768px){
 /* Grid with floats Style */
+    
+    #grid-floats {
+        overflow: hidden;
+    }
+    
     #grid-floats .grid-item{
         width: calc(95% / 3);
         margin: 5px;
@@ -223,12 +228,12 @@ img {
 
     #grid-flex .grid-item:nth-child(1n+2) {
         flex-grow: 1;
-        flex-basis: calc(95% / 4);
+        flex-basis: calc(100% / 4 - 4 * 4px);
         margin: 4px;
     }
 
     #grid-flex .grid-item:nth-child(1n+12) {
-        flex-basis: calc(97.7% / 4);
+        flex-basis: calc(100% / 4 - 4 * 2px);
         flex-grow: unset;
      }
 
