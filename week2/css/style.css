@@ -141,12 +141,12 @@ img {
  #grid-flex .grid-item:nth-child(1n+2) {
     flex-grow:1;
     margin: 5px;
-    flex-basis: calc(97% / 2.1);
+    flex-basis: calc(100% / 2 - 2 * 5px);
  }
 
  #grid-flex .grid-item:nth-last-child(1) {
     flex-grow: unset;
-    flex-basis: calc(97% / 2.07);
+    flex-basis: calc(100% / 2 - 2 * 5px);
     margin-left: auto;
  }
 
