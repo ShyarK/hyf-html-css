@@ -1,30 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px&display=swap');
+
+/* Global selectors*/
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
-    font-family: "RO Sans",Calibri,sans-serif;
+    font-family: 'Slabo 27px', serif;
 }
-
+/* Style all img tages */
+/* Set max-width t0 100% to get fluid Images */
 img{
     max-width: 100%;
 }
-
+/* Change the color of (Meer nieuws) */
 h3, .more {
     color: #01689b;
     cursor: pointer;
 }
 
-h3:hover{
+h3:hover, li:hover {
     text-decoration: underline;
 }
 
+.language-wrapper li:hover {
+    text-decoration: none;
+}
+
+/* Style all li tages */
 li {
     cursor: pointer;
 }
 
-/* Header Style */
+.absolute-position {
+    position: absolute;
+}
+
+/* ======================================
+        Header Style
+======================================== */
 .logo {
     display: flex;
     justify-content: center;
@@ -46,11 +61,7 @@ li {
     padding: 15px 5px 15px 5px;
     border-top: 1px solid #fff;
 }
-
-#top-menu li:hover {
-    text-decoration: underline;
-}
-
+/* Use :nth-child() CSS pseudo-class to target the last child */
 #top-menu li:last-child{
     border-bottom: 1px solid #fff;
 }
@@ -74,17 +85,17 @@ li {
     transform-origin: 2px 5px;
     transition: transform ease-out 0.3s, opacity .30s;
 }
-
+/*to become a relative parents for thier child divs*/
 .image-wrapper, .search-wrapper, .more, .task-wrapper ul li, #menu-hamburger{
-    position: relative;
+    position: relative; 
 }
 
 .search-wrapper {
     bottom: 344px;
 }
-
+/* To get rid of default border of button*/
 input, button {
-    border: none;
+    border: none; 
 }
 
 .search-wrapper input {
@@ -92,15 +103,6 @@ input, button {
     height: 48px;
     padding: 0 80px 0 10px;
     font-size: 1.025em;
-}
-
-#clear, 
-#clear i, 
-.search-submit, 
-.task-wrapper, 
-.copyright
-{
-    position: absolute;
 }
 
 #clear {  
@@ -129,9 +131,9 @@ input, button {
     color: #fff;
     font-size: 20px;
 }
-
-/* top-task-navigation style*/
-
+/* ======================================
+       Top-Task-Navigation style
+======================================== */
 .task-wrapper {
     top: 47%;
     left: 50%;
@@ -155,11 +157,6 @@ input, button {
     font-size: 1.125rem;
     padding-left: 20px;
 }
-
-.task-wrapper li:hover {
-  text-decoration: underline;
-}
-
 .more {
     margin: 0;
 }
@@ -180,9 +177,9 @@ input, button {
     left: 10px;
     color: #fff;
 }
-
-/* main style */
-
+/* ======================================
+           Main Div Style
+======================================== */
 .main-menu ul, .brick-row, aside {
     display: grid;
     grid-gap: 32px;
@@ -219,9 +216,9 @@ input, button {
 .brick-row h3, .brick-row p, .brick-row img {
     margin-bottom: 15px;
 }
-
-/* Neiuws style */
-
+/* ======================================
+         Neiuws style
+======================================== */
 .brick h3 {
     font-size: 1.40rem;
     line-height: 1.50rem;
@@ -236,8 +233,9 @@ input, button {
     margin-top: 0;
 }
 
-/* aside style */
-
+/* ======================================
+        Aaside style
+======================================== */
 aside {
     grid-template-columns: repeat(1, 270px);
     text-align: center;
@@ -255,6 +253,7 @@ aside {
     color: #1b5e84;
     font-weight: bold;
 }
+
 .banner:nth-child(1) p span{
     color: #000;
     font-weight: normal;
@@ -278,11 +277,7 @@ aside {
 .footer-wrapper li, .footer-wrapper h2 {
    margin-bottom: 10px;
 }
-
-.footer-wrapper li:hover {
-    text-decoration: underline;
-}
-
+/* to git full first line */
 .payoff {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -316,7 +311,7 @@ aside {
     color: #000;
     font-weight: 700;
 }
-
+/* to get full line  */
 .language-wrapper li:last-child{
     grid-column-start: 2;
     grid-column-end: 4;
@@ -468,9 +463,9 @@ aside {
         grid-column-end: 3;
     }
 }
-
-/* Add class close and drop-down with javaScript */
-
+/* Add close and drop-down classes with javaScript */
+/* Here using class without space, to select only <main-nav> element with a class name of "container" 
+and no other elements */
 #main-nav.sticky-nav {
     position: fixed;
     top: 0;
