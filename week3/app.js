@@ -48,7 +48,7 @@ clearButton.addEventListener("click", () =>{
 // Add class onscroll
 // onscroll is an event accures when a user scroll the web browser.
 // The scrollY returns the number of pixels that the document is currently scrolled vertically.
-// When its value is 0 it means scroll position is in the top.
+// When its value is 0 it means scroll position is on the top.
 // So when scrolling down will remove the calss
 // When scrolling up will add the class
 // When scrolling back to the top will remove the classes.
